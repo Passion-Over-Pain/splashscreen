@@ -1,3 +1,6 @@
+import { Button } from "@/shared/button";
+import { FaDownload } from "react-icons/fa";
+
 const Navbar = () => {
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl px-8 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-between">
@@ -24,11 +27,29 @@ const Navbar = () => {
         >
           Bubbles
         </a>
+        <a
+          href="#bubbles"
+          className="hover:text-brand-primary transition-colors"
+        >
+          Bubbles
+        </a>
+        <a
+          href="#bubbles"
+          className="hover:text-brand-primary transition-colors"
+        >
+          Bubbles
+        </a>
+        <a
+          href="#bubbles"
+          className="hover:text-brand-primary transition-colors"
+        >
+          Bubbles
+        </a>
       </div>
 
-      <button className="bg-brand-navy text-black px-6 py-2.5 rounded-full text-sm font-medium hover:bg-brand-primary transition-all">
+      <Button variant="secondary" size="md" icon={<FaDownload size={16} />}>
         Download App
-      </button>
+      </Button>
     </nav>
   );
 };
