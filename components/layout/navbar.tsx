@@ -1,54 +1,58 @@
+"use client";
 import { Button } from "@/shared/button";
-import { FaDownload } from "react-icons/fa";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl px-8 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-between">
-      <div className="text-xl font-serif font-bold text-brand-navy">
-        SplashScreen
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl px-8 py-4 rounded-full bg-black/10 backdrop-blur-md border border-white/20 flex items-center justify-between  text-white font-serif">
+      <div className="flex items-center gap-3">
+        <div className="relative w-8 h-8">
+          <Image
+            src="/images/logo.png"
+            alt="SplashScreen Logo"
+            fill
+            sizes="32px"
+            className="object-contain"
+          />
+        </div>
+        <span className="text-xl font-serif font-bold ">SplashScreen</span>
       </div>
 
-      <div className="hidden md:flex items-center gap-8 text-sm font-medium text-brand-navy/80">
+      {/* Navigation Links */}
+      <div className="hidden md:flex items-center gap-8 text-lg font-medium ">
         <a
-          href="#how-it-works"
+          href="/#story"
           className="hover:text-brand-primary transition-colors"
         >
-          How it Works
+          Story
         </a>
         <a
-          href="#marketplace"
+          href="/#features"
           className="hover:text-brand-primary transition-colors"
         >
-          Marketplace
+          Features
         </a>
         <a
-          href="#bubbles"
+          href="/#gallery"
           className="hover:text-brand-primary transition-colors"
         >
-          Bubbles
+          Gallery
         </a>
-        <a
-          href="#bubbles"
-          className="hover:text-brand-primary transition-colors"
-        >
-          Bubbles
+        <a href="/#team" className="hover:text-brand-primary transition-colors">
+          Team
         </a>
-        <a
-          href="#bubbles"
-          className="hover:text-brand-primary transition-colors"
-        >
-          Bubbles
-        </a>
-        <a
-          href="#bubbles"
-          className="hover:text-brand-primary transition-colors"
-        >
-          Bubbles
+        <a href="/#faq" className="hover:text-brand-primary transition-colors">
+          FAQ
         </a>
       </div>
 
-      <Button variant="secondary" size="md" icon={<FaDownload size={16} />}>
-        Download App
+      <Button
+        variant="secondary"
+        size="md"
+        href="https://github.com/LRedpathZA/IT-Project/releases/download/alpha_1.3/splashscreen.apk"
+      >
+        <IoLogoGooglePlaystore size={16} /> Download App
       </Button>
     </nav>
   );
