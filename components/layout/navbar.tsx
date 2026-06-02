@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl px-8 py-4 rounded-full bg-black backdrop-blur-md border border-white/20 flex items-center justify-between  text-white font-serif">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl px-8 py-4 rounded-full bg-black/10 backdrop-blur-md border border-white/20 flex items-center justify-between  text-white font-serif">
       <div className="flex items-center gap-3">
         <div className="relative w-8 h-8">
           <Image
@@ -47,7 +47,11 @@ const Navbar = () => {
         </a>
       </div>
 
-      <Button variant="secondary" size="md">
+      <Button
+        variant="secondary"
+        size="md"
+        href="https://github.com/LRedpathZA/IT-Project/releases/download/alpha_1.3/splashscreen.apk"
+      >
         <IoLogoGooglePlaystore size={16} /> Download App
       </Button>
     </nav>
