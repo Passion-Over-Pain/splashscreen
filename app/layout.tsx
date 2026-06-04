@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const BASE_URL = "https://splashscreen-20z.pages.dev";
+const BASE_URL = "https://splashscreen-teal.vercel.app/";
 
 export const viewport: Viewport = {
   themeColor: "#0ea5e9",
